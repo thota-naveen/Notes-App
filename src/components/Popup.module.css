@@ -1,0 +1,74 @@
+.bg {
+    background-color: white;
+    height: 35vh;
+    width: 35vw;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    padding: 1rem;
+}
+
+.h {
+    color: black;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3.5%;
+    margin-top: 25px;
+    margin-left: 40px;
+
+}
+
+.sec {
+    color: black;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: 3.5%;
+    margin-left: 58px;
+    margin-top: 1rem;
+}
+
+.bar {
+    border-radius: 22px;
+    border: 2px;
+    padding: 8px;
+    width: 40%;
+    margin-left: 10px;
+    border: 1px solid black;
+}
+
+.nam {
+    color: black;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 3.5%;
+   
+    margin-left: 58px;
+
+}
+
+.btn {
+    background-color: black;
+    color: white;
+    position: absolute;
+    height: 35px;
+    width: 85px;
+    border-radius: 18px;
+    border: 2px;
+    right: 18px;
+    bottom: 10px;
+}
+
+.color {
+    height: 5vh;
+    /* width: 2vw; */
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0px 0px 0px 10px;
+    cursor: pointer;
+    
+}
+.col{
+    margin-top: 30px;
+}

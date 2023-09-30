@@ -1,0 +1,20 @@
+.sidebar{
+    width: 25vw;
+    height: 100vh;
+    border-right: 1px solid black;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 10px;
+    box-sizing: border-box;
+}
+.heading{
+    font-size: 1.4rem;
+}
+.btn{
+    background-color: black;
+    color: white;
+    padding: 6px 30px;
+    border-radius: 15px;
+    margin-top: 13px;
+    margin-left: 27px;
+    cursor: pointer;
+}

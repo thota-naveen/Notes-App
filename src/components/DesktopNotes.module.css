@@ -1,0 +1,17 @@
+.notes{
+    background-color: #F7ECDC;
+    width: 75vw;
+    height: 100vh;
+    background-image: url('../images/bg-img.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.down{
+    color:#292929;
+    
+}
