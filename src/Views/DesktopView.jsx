@@ -4,16 +4,26 @@ import DesktopNotes from "../components/DesktopNotes";
 import Popup from "../components/Popup";
 
 function DesktopView() {
-  const [selected,setSelected]=useState('false');
-  const [bg,setBG]=useState('white');
-  // selected && (setBG('#2F2F2F'));
+  const [selected, setSelected] = useState(false);
+  const [noteName, setNoteName] = useState([]);
+  
   return (
     <div>
-    <div style={{ display: "flex" }}>
-      <DesktopSideBar selected={selected} setSelected={setSelected} setBG={setBG} />
-      <DesktopNotes/>
-    </div>
-    {selected || <div> <Popup/> </div>}
+      <div style={{ display: "flex" }}>
+        <DesktopSideBar
+          selected={selected}
+          setSelected={setSelected}
+          noteName={noteName}
+          setNoteName={setNoteName}
+        />
+        <DesktopNotes />
+      </div>
+      {selected && (
+        <div>
+          {" "}
+          <Popup noteName={noteName} setNoteName={setNoteName} setSelected={setSelected} />{" "}
+        </div>
+      )}
     </div>
   );
 }

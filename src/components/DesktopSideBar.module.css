@@ -1,20 +1,36 @@
-.sidebar{
-    width: 25vw;
-    height: 100vh;
-    border-right: 1px solid black;
-    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 10px;
-    box-sizing: border-box;
+.sidebar {
+  width: 25vw;
+  height: 100vh;
+  border-right: 1px solid black;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+    sans-serif;
+  padding: 10px;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
-.heading{
-    font-size: 1.4rem;
+
+.heading {
+  font-size: 1.4rem;
 }
-.btn{
-    background-color: black;
-    color: white;
-    padding: 6px 30px;
-    border-radius: 15px;
-    margin-top: 13px;
-    margin-left: 27px;
-    cursor: pointer;
+.btn {
+  background-color: black;
+  color: white;
+  padding: 6px 30px;
+  border-radius: 15px;
+  margin-top: 13px;
+  margin-left: 27px;
+  cursor: pointer;
+}
+.logo {
+  width: 15%;
+  aspect-ratio: 1;
+  border: 0px solid black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  align-items: center;
+  font-weight: 700;
+  margin-right: 10%;
+  font-size: 1.1rem;
 }
