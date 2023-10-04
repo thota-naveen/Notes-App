@@ -8,7 +8,9 @@
   box-sizing: border-box;
   overflow-y: scroll;
 }
-
+.sidebar::-webkit-scrollbar{
+  width: 0px;
+}
 .heading {
   font-size: 1.4rem;
 }

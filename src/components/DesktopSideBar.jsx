@@ -1,23 +1,21 @@
 import React, { useEffect, useState } from "react";
 import barstyle from "./DesktopSideBar.module.css";
-function DesktopSideBar({
-  selected,
-  setSelected,
-  noteName,
-  setNoteName
-}) {
+
+function DesktopSideBar({ selected, setSelected, noteName, setNoteName }) {
   // localStorage.clear();
-  const [notes,setNotes]=useState([])
+  const [notes, setNotes] = useState([]);
+
   useEffect(() => {
-    const storedNotes = JSON.parse(localStorage.getItem('noteName'));
+    const storedNotes = JSON.parse(localStorage.getItem("noteName"));
     if (Array.isArray(storedNotes)) {
       setNotes(storedNotes);
     } else {
-      setNotes([]); // Set to an empty array if 'storedNotes' is not an array
+      setNotes([]);
     }
-    // console.log(notes)
   }, [noteName]);
-
+  const showMessages=()=>{
+    
+  }
   return (
     <div className={barstyle.sidebar}>
       <p className={barstyle.heading}>Pocket Notes</p>
@@ -48,6 +46,7 @@ function DesktopSideBar({
                 marginTop: "5%",
                 cursor: "pointer",
               }}
+              onClick={showMessages}
             >
               <div
                 className={barstyle.logo}
