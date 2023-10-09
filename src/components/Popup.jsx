@@ -13,10 +13,11 @@ function Popup({
   const nameRef = useRef("");
   const [colorSelected, setColorSelected] = useState("");
   // const [date, SetDate] = useState(new Date(Date.now()));
-  
 
   const handleCreate = () => {
-    if (!(nameRef.current.value === "" || colorSelected === "")) {
+    if (
+      !(nameRef.current.value === "" || colorSelected === "") 
+    ) {
       // Create a new note object
       const newNote = {
         name: nameRef.current.value,
@@ -28,17 +29,13 @@ function Popup({
       localStorage.setItem("noteName", JSON.stringify(updatedNotes));
       setSelected(false);
       // createNoteObj(noteName.name);
-      setNoteObject((prevNoteObject) => {
-        return {
-          ...prevNoteObject,
-          [newNote.name]: {
-            name: newNote.name,
-            messages: {},
-          },
-        };
-      });
-      localStorage.setItem('messages',JSON.stringify(noteObject));
-      
+      const prevObj = JSON.parse(localStorage.getItem("messages"));
+      const newObj = {
+        ...prevObj, // Copy the existing object
+        [newNote.name]: {}, // Add the new note using its name as the key
+      };
+      setNoteObject(newObj);
+      localStorage.setItem("messages", JSON.stringify(newObj));
     }
   };
 

@@ -37,17 +37,18 @@
 }
 .input::placeholder {
   position: absolute;
-  top: 2%;
+  top: 17%;
   color: #9a9a9a;
   font-size: 1rem;
 }
 .input {
   height: 100%;
   width: 100%;
-  font-size: 1rem;
+  font-size: 1.2rem;
   text-overflow: ellipsis;
   resize: none;
   padding: 1rem;
+  padding-right: 3rem;
   box-sizing: border-box;
 }
 .input::-webkit-scrollbar {

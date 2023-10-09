@@ -1,10 +1,17 @@
 import React, { useEffect, useState } from "react";
 import barstyle from "./DesktopSideBar.module.css";
 
-function DesktopSideBar({ selected, setSelected, noteName, setNoteName }) {
+function DesktopSideBar({
+  selected,
+  setSelected,
+  noteName,
+  setNoteName,
+  messageName,
+  setMessageName,
+}) {
   // localStorage.clear();
   const [notes, setNotes] = useState([]);
-
+  // noteObj.hasOwnProperty('naveen')
   useEffect(() => {
     const storedNotes = JSON.parse(localStorage.getItem("noteName"));
     if (Array.isArray(storedNotes)) {
@@ -13,9 +20,7 @@ function DesktopSideBar({ selected, setSelected, noteName, setNoteName }) {
       setNotes([]);
     }
   }, [noteName]);
-  const showMessages=()=>{
-    
-  }
+
   return (
     <div className={barstyle.sidebar}>
       <p className={barstyle.heading}>Pocket Notes</p>
@@ -35,29 +40,29 @@ function DesktopSideBar({ selected, setSelected, noteName, setNoteName }) {
           marginTop: "10%",
         }}
       >
-        {
-          // setNoteName(JSON.parse(localStorage.getItem('noteName')))
-          notes.map((note, index) => (
+        {notes.map((note, index) => (
+          <div
+            key={index}
+            style={{
+              display: "flex",
+              alignItems: "center",
+              marginTop: "5%",
+              cursor: "pointer",
+            }}
+            onClick={() => {
+              setMessageName(note.name);
+              // console.log(messageName)
+            }}
+          >
             <div
-              key={index}
-              style={{
-                display: "flex",
-                alignItems: "center",
-                marginTop: "5%",
-                cursor: "pointer",
-              }}
-              onClick={showMessages}
+              className={barstyle.logo}
+              style={{ backgroundColor: note.colour }}
             >
-              <div
-                className={barstyle.logo}
-                style={{ backgroundColor: note.colour }}
-              >
-                {note.name.toUpperCase().slice(0, 2)}
-              </div>
-              <div className={barstyle.name}>{note.name}</div>
+              {note.name.toUpperCase().slice(0, 2)}
             </div>
-          ))
-        }
+            <div className={barstyle.name}>{note.name}</div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -7,7 +7,8 @@ import NotesList from "../components/NotesList";
 function DesktopView() {
   const [selected, setSelected] = useState(false);
   const [noteName, setNoteName] = useState([]);
-  const [noteObject, setNoteObject] = useState([]);
+  const [noteObject, setNoteObject] = useState({});
+  const [messageName, setMessageName] = useState("");
   
   return (
     <div style={{ overflow: "hidden" }}>
@@ -17,9 +18,17 @@ function DesktopView() {
           setSelected={setSelected}
           noteName={noteName}
           setNoteName={setNoteName}
+          messageName={messageName}
+          setMessageName={setMessageName}
         />
         {/* <DesktopNotes /> */}
-        <NotesList noteObject={noteObject} setNoteObject={setNoteObject} noteName={noteName}/>
+        <NotesList
+          noteObject={noteObject}
+          setNoteObject={setNoteObject}
+          messageName={messageName}
+          setMessageName={setMessageName}
+          noteName={noteName}
+        />
       </div>
       {selected && (
         <div>

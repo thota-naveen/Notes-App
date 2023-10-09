@@ -1,49 +1,50 @@
 .bg {
     background-color: white;
-    height: 35vh;
+    height: 40vh;
     width: 35vw;
     position: absolute;
     left: 50%;
     top: 50%;
     translate: -50% -50%;
-    padding: 1rem;
+
 }
 
 .h {
     color: black;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     letter-spacing: 3.5%;
-    margin-top: 25px;
-    margin-left: 40px;
+
+    margin-top: 1.5rem;
+    margin-left: 2.3rem;
 
 }
 
 .sec {
     color: black;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1rem;
     letter-spacing: 3.5%;
-    margin-left: 58px;
-    margin-top: 1rem;
+
+    margin-left:2.9rem;
+    margin-top: 2rem;
 }
 
 .bar {
-    border-radius: 22px;
-    border: 2px;
-    padding: 8px;
-    width: 40%;
-    margin-left: 10px;
-    border: 1px solid black;
+    border-radius: 2rem;
+    border: 2rem;
+    padding: 0.5rem;
+    width: 50%;
+    margin-left: 1rem;
+    border: 0.01rem solid black;
 }
 
 .nam {
     color: black;
     font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 3.5%;
-   
-    margin-left: 58px;
+    margin-left: 2.9rem;
 
 }
 
@@ -51,25 +52,50 @@
     background-color: black;
     color: white;
     position: absolute;
-    height: 35px;
-    width: 85px;
-    border-radius: 18px;
-    border: 2px;
-    right: 18px;
-    bottom: 10px;
+    height: 2.5rem;
+    width: 5rem;
+    border-radius: 2rem;
+    border: 2rem;
+    right: 1rem;
+    bottom: 0.5rem;
     cursor: pointer;
 }
 
 .color {
-    height: 5vh;
-    /* width: 2vw; */
-    aspect-ratio: 1/1;
+    height: 2.0rem;
+    aspect-ratio: 1;
+    /* border: 2px solid black; */
     border-radius: 50%;
     display: inline-block;
-    margin: 0px 0px 0px 10px;
+    margin:-0.5% 0% 0% 1%;
     cursor: pointer;
-    
+
 }
 .col{
-    margin-top: 30px;
+    margin-top: 1.9rem;
+}
+
+@media screen and (max-width: 768px) {
+    .bg {
+        width: 90vw;
+        height:25vh;
+    }
+
+    .h, .sec, .nam {
+        font-size: 1rem;
+        margin-left: 1rem;
+    }
+
+    .sec {
+        margin-top: 1rem;
+        margin-left: 1rem;
+    }
+
+    .bar {
+        width: 100%;
+        margin: 0.5rem ;
+    }
+
+
+
 }
